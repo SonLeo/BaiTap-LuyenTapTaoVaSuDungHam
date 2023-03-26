@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2</title>
+</head>
+<body>
+    <script>
+        let valueInput = prompt("Enter star's name: ");
+        let valueLower = valueInput.toLowerCase();
+        let star = ["polaris", "aldebaran", "deneb", "vega", "altair", "dubhe", "regulus"];
+        let constellation = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+
+        function findConstellation(name) {
+            for (let i = 0; i < star.length; i++) {
+                if (star[i] == name) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        let valueFound = findConstellation(valueLower);
+
+        if (valueFound == -1) {
+            alert(valueInput + " star not found!");
+        } else {
+            alert("The star " + valueInput + " is in the constellation " + constellation[valueFound]);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính bình phương</title>
+</head>
+<body>
+    <script>
+        function square(x) {
+            x = parseFloat(x);
+            
+            if(isNaN(x) || x == null) {
+                return -1;
+            } else {
+                return x*x;
+            }
+        }
+
+        let calculate = square("a");
+        
+        if(calculate == -1) {
+            alert("Dữ liệu nhập vào chưa đúng, vui lòng kiểm tra lại!")
+        } else {
+            alert(calculate);
+        }
+    </script>
+</body>
+</html>

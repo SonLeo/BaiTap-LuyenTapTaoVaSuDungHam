@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area and perimeter of a circle</title>
+</head>
+<body>
+    <script>
+        function circleArea (radius) {
+            radius = parseFloat(radius);
+            if (isNaN(radius) || radius == null || radius < 0) {
+                return -1;
+            } else {
+                return Math.PI * radius * radius;
+            }
+        }
+
+        function circleCircumference (radius) {
+            radius = parseFloat(radius);
+            if (isNaN(radius) || radius == null || radius < 0) {
+                return -1;
+            } else {
+                return Math.PI * 2 * radius;
+            }
+        }
+
+        let area = circleArea(2);
+        let circumference = circleCircumference(2);
+
+        if (area == -1) {
+            alert("Dữ liệu nhập vào chưa đúng, vui lòng kiểm tra lại!")
+        } else {
+            alert("Diện tích hình tròn bằng: " + area.toFixed(2));
+        }
+
+        if (circumference == -1) {
+            alert("Dữ liệu nhập vào chưa đúng, vui lòng kiểm tra lại!")
+        } else {
+            alert("Chu vi hình tròn bằng: " + circumference.toFixed(2));
+        }
+    </script>
+</body>
+</html>

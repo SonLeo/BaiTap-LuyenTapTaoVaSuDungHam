@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse array</title>
+</head>
+
+<body>
+    <script>
+        function reverseArray(arr) {
+            if (arr.length == 0) {
+                return -1;
+            } else {
+                let left = 0;
+                let right = arr.length - 1;
+
+                while (left < right) {
+                    let swap = arr[left];
+                    arr[left] = arr[right];
+                    arr[right] = swap;
+                    left++;
+                    right--;
+                }
+            }
+            return arr;
+        }
+
+        let array = [-3, 5, 1, 3, 2, 10];
+        let calculate = reverseArray(array);
+        if (calculate == -1) {
+            alert("mảng rỗng!")
+        } else {
+            document.write(calculate.toString());
+        }
+    </script>
+</body>
+
+</html>

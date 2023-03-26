@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positive integer</title>
+</head>
+<body>
+    <script>
+        function positiveInteger(num) {
+            num = parseFloat(num);
+            if (isNaN(num) || num == null) {
+                return -1;
+            } else if (num > 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        let calculate = positiveInteger(5);
+        if (calculate == -1) {
+            alert("Dữ liệu nhập vào chưa đúng, vui lòng kiểm tra lại.");
+        } else if (calculate) {
+            alert("Số nhập vào là số nguyên dương");
+        } else {
+            alert("Số nhập vào không phải là số nguyên dương")
+        }
+    </script>
+</body>
+</html>
